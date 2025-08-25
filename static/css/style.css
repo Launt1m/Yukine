@@ -243,34 +243,21 @@ body {
 .bio-panel {
     position: fixed;
     top: 0;
-    right: -400px;
+    left: -400px;
     width: 350px;
     height: 100vh;
     background: rgba(15, 15, 25, 0.25);
     backdrop-filter: blur(20px) saturate(180%);
     -webkit-backdrop-filter: blur(20px) saturate(180%);
     padding: 30px;
-    box-shadow: -5px 0 30px rgba(0, 0, 0, 0.4);
-    transition: right 0.4s ease;
+    box-shadow: 5px 0 30px rgba(0, 0, 0, 0.4);
+    transition: left 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Плавная анимация */
     z-index: 100;
     overflow-y: auto;
-    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .bio-panel.active {
-    right: 0;
-}
-
-.bio-panel.left-bio {
-    right: auto;
-    left: -400px;
-    border-left: none;
-    border-right: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 5px 0 30px rgba(0, 0, 0, 0.4);
-}
-
-.bio-panel.left-bio.active {
-    right: auto;
     left: 0;
 }
 
@@ -338,11 +325,6 @@ body {
     }
     
     .bio-panel {
-        width: 85%;
-        right: -100%;
-    }
-    
-    .bio-panel.left-bio {
         width: 85%;
         left: -100%;
     }
