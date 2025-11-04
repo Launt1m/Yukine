@@ -1,5 +1,5 @@
 const texts = [
-    "I'm grr, you're grr"
+    "Не зевай давай делай погромче свой микшер"
 ];
 let textIndex = 0;
 let charIndex = 0;
@@ -84,4 +84,5 @@ document.addEventListener('click', function(event) {
 
 window.addEventListener('load', function() {
     setTimeout(typeEffect, 1000);
+
 });
